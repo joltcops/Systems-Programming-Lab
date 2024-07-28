@@ -1,0 +1,23 @@
+My Roll Number = 22CS30042
+Secret found = 757008
+
+1. chmod 700 ./guessit (to give permission)
+2. gdb ./guessit (To execute gdb on guessit)
+
+3. The command l was used to list the lines to find in which line the variable guess was declared, so that the value of guess could be modified while running gdb
+
+4. b 21 was used to set a breakpoint at line 21 where guess was set
+
+5. r 22CS30042 was used to run the code with my roll number
+
+6. n to run line number 21
+
+7. set var guess=0 to modify the value of variable guess. I kept guess=0, then 1, 2, 4 and so on upto 2^19 to check which bits are 1 and which are 0. If a bit is different, then the number of bits different remains same, else it decreases.
+For me, it showed 9 bits different for guess=0, and whenever a bit was 1, it showed 7 bits different
+When I obtained the secret number 757008, it showed "Wow you are bang on the target. Well done"
+
+8. c to continue executing upto the end of the program
+
+9. Steps 5 to 8 were repeated till the correct s was obtained
+
+10. q to quit from gdb
